@@ -6,7 +6,7 @@ type MainPageProps = {
 
 function MainPage({ offerCount }: MainPageProps): JSX.Element {
   return (
-    <>
+    <main className="page__main page__main--index">
       <h1 className="visually-hidden">Cities</h1>
       <div className="tabs">
         <section className="locations container">
@@ -90,7 +90,7 @@ function MainPage({ offerCount }: MainPageProps): JSX.Element {
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 }
 
