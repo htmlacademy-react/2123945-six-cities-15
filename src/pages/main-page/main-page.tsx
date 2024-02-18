@@ -1,4 +1,8 @@
-function MainPage(): JSX.Element {
+type MainPageProps = {
+  offerCount: number;
+};
+
+function MainPage({ offerCount }: MainPageProps): JSX.Element {
   return (
     <>
       <h1 className="visually-hidden">Cities</h1>
@@ -109,7 +113,11 @@ function MainPage(): JSX.Element {
                   </div>
                   <div className="place-card__rating rating">
                     <div className="place-card__stars rating__stars">
-                      <span style="width: 80%"></span>
+                      <span
+                        style={{
+                          width: '80%',
+                        }}
+                      ></span>
                       <span className="visually-hidden">Rating</span>
                     </div>
                   </div>
@@ -158,7 +166,11 @@ function MainPage(): JSX.Element {
                   </div>
                   <div className="place-card__rating rating">
                     <div className="place-card__stars rating__stars">
-                      <span style="width: 80%"></span>
+                      <span
+                        style={{
+                          width: '80%',
+                        }}
+                      ></span>
                       <span className="visually-hidden">Rating</span>
                     </div>
                   </div>
@@ -205,7 +217,11 @@ function MainPage(): JSX.Element {
                   </div>
                   <div className="place-card__rating rating">
                     <div className="place-card__stars rating__stars">
-                      <span style="width: 80%"></span>
+                      <span
+                        style={{
+                          width: '80%',
+                        }}
+                      ></span>
                       <span className="visually-hidden">Rating</span>
                     </div>
                   </div>
@@ -255,7 +271,11 @@ function MainPage(): JSX.Element {
                   </div>
                   <div className="place-card__rating rating">
                     <div className="place-card__stars rating__stars">
-                      <span style="width: 100%"></span>
+                      <span
+                        style={{
+                          width: '100%',
+                        }}
+                      ></span>
                       <span className="visually-hidden">Rating</span>
                     </div>
                   </div>
@@ -302,7 +322,11 @@ function MainPage(): JSX.Element {
                   </div>
                   <div className="place-card__rating rating">
                     <div className="place-card__stars rating__stars">
-                      <span style="width: 80%"></span>
+                      <span
+                        style={{
+                          width: '80%',
+                        }}
+                      ></span>
                       <span className="visually-hidden">Rating</span>
                     </div>
                   </div>
@@ -322,3 +346,5 @@ function MainPage(): JSX.Element {
     </>
   );
 }
+
+export default MainPage;
