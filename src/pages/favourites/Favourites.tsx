@@ -57,7 +57,8 @@ function Favourites(): JSX.Element {
                           style={{
                             width: '100%',
                           }}
-                        ></span>
+                        >
+                        </span>
                         <span className="visually-hidden">Rating</span>
                       </div>
                     </div>
@@ -108,7 +109,8 @@ function Favourites(): JSX.Element {
                           style={{
                             width: '80%',
                           }}
-                        ></span>
+                        >
+                        </span>
                         <span className="visually-hidden">Rating</span>
                       </div>
                     </div>
@@ -170,7 +172,8 @@ function Favourites(): JSX.Element {
                           style={{
                             width: '100%',
                           }}
-                        ></span>
+                        >
+                        </span>
                         <span className="visually-hidden">Rating</span>
                       </div>
                     </div>
