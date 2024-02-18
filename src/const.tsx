@@ -1,3 +1,3 @@
 export const Setting = {
-  offerCount: 312,
+  OfferCount: 312,
 };
