@@ -1,5 +1,3 @@
-import Logo from '../../components/logo/Logo';
-
 function Offer(): JSX.Element {
   return (
     <article className="cities__card place-card">
@@ -8,7 +6,15 @@ function Offer(): JSX.Element {
       </div>
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
-          <Logo />
+          <a href="#">
+            <img
+              className="place-card__image"
+              src="img/apartment-small-03.jpg"
+              width="150"
+              height="110"
+              alt="Place image"
+            />
+          </a>
         </a>
       </div>
       <div className="place-card__info">
