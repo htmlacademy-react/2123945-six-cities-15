@@ -1,5 +1,5 @@
 import { Cards } from '../../mock-data/mock-data';
-import CardItem from '../card/card';
+import CardItem from '../card-item/card-item';
 
 function CardsList(): JSX.Element {
   return (

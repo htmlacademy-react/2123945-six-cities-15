@@ -1,4 +1,4 @@
-import CitiesList from '../city-list/city-list';
+import CitiesList from '../cities-list/cities-list';
 import Logo from '../logo/logo';
 
 function Header(): JSX.Element {
