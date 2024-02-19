@@ -1,7 +1,7 @@
 import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 
-function FavouritesEmpty(): JSX.Element {
+function FavouritesPageEmpty(): JSX.Element {
   return (
     <div className="page page--favorites-empty">
       <Header/>
@@ -25,4 +25,4 @@ function FavouritesEmpty(): JSX.Element {
   );
 }
 
-export default FavouritesEmpty;
+export default FavouritesPageEmpty;
