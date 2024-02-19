@@ -1,6 +1,6 @@
-import Header from '../header/Header';
-import MainPage from '../../pages/main-page/MainPage';
-import Footer from '../footer/Footer';
+import Header from '../header/header';
+import MainPage from '../../pages/main-page/main-page';
+import Footer from '../footer/footer';
 
 type PageLayoutProps = {
   offerCount: number;

@@ -1,4 +1,4 @@
-import MainPage from '../../pages/main-page/MainPage';
+import MainPage from '../../pages/main-page/main-page';
 
 type MainPageScreenProps = {
   offerCount: number;

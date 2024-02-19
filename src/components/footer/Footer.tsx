@@ -1,4 +1,4 @@
-import Logo from '../logo/Logo';
+import Logo from '../logo/logo';
 
 function Footer(): JSX.Element {
   return (
