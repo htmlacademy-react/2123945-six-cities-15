@@ -34,11 +34,11 @@ function MainPage({ offerCount }: MainPageProps): JSX.Element {
               <OptionsList/>
             </form>
             <div className="cities__places-list places__list tabs__content">
-              <Offer />
-              <Offer />
-              <Offer />
-              <Offer />
-              <Offer />
+              <Offer/>
+              <Offer/>
+              <Offer/>
+              <Offer/>
+              <Offer/>
             </div>
           </section>
           <div className="cities__right-section">

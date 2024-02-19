@@ -7,7 +7,7 @@ function Header(): JSX.Element {
         <div className="header__wrapper">
           <div className="header__left">
             <a className="header__logo-link header__logo-link--active">
-              <Logo />
+              <Logo/>
             </a>
           </div>
           <nav className="header__nav">
