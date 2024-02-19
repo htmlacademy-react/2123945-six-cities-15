@@ -14,12 +14,4 @@ function CityItem({city} : CityItemProps): JSX.Element {
   );
 }
 
-function CitiesList(): JSX.Element {
-  return (
-    <ul className="locations__list tabs__list">
-      {Cities.map((city) => <CityItem city={city} key={city}/>)}
-    </ul>
-  );
-}
-
-export default CitiesList;
+export default CityItem;

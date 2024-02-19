@@ -1,3 +1,4 @@
+import CitiesList from '../city-list/city-list';
 import Logo from '../logo/logo';
 
 function Header(): JSX.Element {
@@ -33,6 +34,7 @@ function Header(): JSX.Element {
           </nav>
         </div>
       </div>
+      <CitiesList/>
     </header>
   );
 }
