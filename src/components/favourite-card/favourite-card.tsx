@@ -1,20 +1,20 @@
 type CardItem = {
-  id: number | string;
-  title: string;
-  type: 'apartment' | 'room' | 'house' | 'hotel';
-  price: number;
-  previewImage: string;
-  city: {
-  name: string;
-  };
-  isFavorite: boolean;
-  isPremium: boolean;
-  rating: number;
-  }
+    id: number | string;
+    title: string;
+    type: 'apartment' | 'room' | 'house' | 'hotel';
+    price: number;
+    previewImage: string;
+    city: {
+    name: string;
+    };
+    isFavorite: boolean;
+    isPremium: boolean;
+    rating: number;
+    }
 
-type CardItemProps = {
-  card: CardItem;
-}
+  type FavouriteProps = {
+    card: CardItem;
+  }
 
 function PremiumBadge(): JSX.Element {
   return (
@@ -24,29 +24,28 @@ function PremiumBadge(): JSX.Element {
   );
 }
 
-function CardItem({card}: CardItemProps): JSX.Element {
+
+function FavouriteCard({card} : FavouriteProps): JSX.Element {
   const {title, type, price, isPremium, previewImage} = card;
   return (
-    <article className="cities__card place-card">
+    <article className="favorites__card place-card">
       {isPremium && <PremiumBadge/>}
-      <div className="cities__image-wrapper place-card__image-wrapper">
+      <div className="favorites__image-wrapper place-card__image-wrapper">
         <a href="#">
-          <a href="#">
-            <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place image" />
-          </a>
+          <img className="place-card__image" src={previewImage} width="150" height="110" alt="Place image"/>
         </a>
       </div>
-      <div className="place-card__info">
+      <div className="favorites__card-info place-card__info">
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
             <b className="place-card__price-value">&euro;{price}</b>
             <span className="place-card__price-text">&#47;&nbsp;night</span>
           </div>
-          <button className="place-card__bookmark-button button" type="button">
+          <button className="place-card__bookmark-button place-card__bookmark-button--active button" type="button">
             <svg className="place-card__bookmark-icon" width="18" height="19">
               <use xlinkHref="#icon-bookmark"></use>
             </svg>
-            <span className="visually-hidden">To bookmarks</span>
+            <span className="visually-hidden">In bookmarks</span>
           </button>
         </div>
         <div className="place-card__rating rating">
@@ -55,8 +54,7 @@ function CardItem({card}: CardItemProps): JSX.Element {
               style={{
                 width: '80%',
               }}
-            >
-            </span>
+            />
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
@@ -69,4 +67,4 @@ function CardItem({card}: CardItemProps): JSX.Element {
   );
 }
 
-export default CardItem;
+export default FavouriteCard;
