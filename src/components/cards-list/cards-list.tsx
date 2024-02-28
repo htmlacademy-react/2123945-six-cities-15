@@ -1,10 +1,10 @@
-import { Cards } from '../../mock-data/mock-data';
+import { cards } from '../../mock-data/mock-data';
 import CardItem from '../card-item/card-item';
 
 function CardsList(): JSX.Element {
   return (
     <div className="cities__places-list places__list tabs__content">
-      {Cards.map((card) => <CardItem card={card} key={card.id}/>)}
+      {cards.map((card) => <CardItem card={card} key={card.id}/>)}
     </div>
   );
 }

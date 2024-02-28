@@ -1,4 +1,4 @@
-export const Cards = [
+export const cards = [
   {
     'id': '1',
     'title': 'The Joshua Tree House',

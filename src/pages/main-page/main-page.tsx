@@ -14,7 +14,7 @@ function MainPage({ offerCount }: MainPageProps): JSX.Element {
       <h1 className="visually-hidden">Cities</h1>
       <div className="tabs">
         <section className="locations container">
-          <CitiesList/>
+          <CitiesList city={'Paris'}/>
         </section>
       </div>
       <div className="cities">

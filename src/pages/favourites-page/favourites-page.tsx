@@ -1,7 +1,7 @@
 import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import FavouriteCard from '../../components/favourite-card/favourite-card';
-import { Cards } from '../../mock-data/mock-data';
+import { cards } from '../../mock-data/mock-data';
 
 type FavouritesPageProps = {
   title: string;
@@ -33,19 +33,19 @@ function FavouritesPage({card}: FavouritesPageProps): JSX.Element {
                 </div>
                 <div className="favorites__places">
                   <FavouriteCard
-                    title={Cards.title}
-                    type={Cards.type}
-                    price={Cards.price}
-                    isPremium={Cards.isPremium}
-                    previewImage={Cards.previewImage}
+                    title={cards.title}
+                    type={cards.type}
+                    price={cards.price}
+                    isPremium={cards.isPremium}
+                    previewImage={cards.previewImage}
                   />
 
                   <FavouriteCard
-                    title={Cards.title}
-                    type={Cards.type}
-                    price={Cards.price}
-                    isPremium={Cards.isPremium}
-                    previewImage={Cards.previewImage}
+                    title={cards.title}
+                    type={cards.type}
+                    price={cards.price}
+                    isPremium={cards.isPremium}
+                    previewImage={cards.previewImage}
                   />
                 </div>
               </li>
@@ -60,11 +60,11 @@ function FavouritesPage({card}: FavouritesPageProps): JSX.Element {
                 </div>
                 <div className="favorites__places">
                   <FavouriteCard
-                    title={Cards.title}
-                    type={Cards.type}
-                    price={Cards.price}
-                    isPremium={Cards.isPremium}
-                    previewImage={Cards.previewImage}
+                    title={cards.title}
+                    type={cards.type}
+                    price={cards.price}
+                    isPremium={cards.isPremium}
+                    previewImage={cards.previewImage}
                   />
                 </div>
               </li>
