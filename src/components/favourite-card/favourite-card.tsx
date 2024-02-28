@@ -1,7 +1,7 @@
 type CardItem = {
     id: number | string;
     title: string;
-    type: 'apartment' | 'room' | 'house' | 'hotel';
+    type: RentType;
     price: number;
     previewImage: string;
     city: {
@@ -11,6 +11,8 @@ type CardItem = {
     isPremium: boolean;
     rating: number;
     }
+
+  type RentType = 'apartment' | 'room' | 'house' | 'hotel';
 
   type FavouriteProps = {
     card: CardItem;

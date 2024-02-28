@@ -5,11 +5,13 @@ import { cards } from '../../mock-data/mock-data';
 
 type FavouritesPageProps = {
   title: string;
-  type: 'apartment' | 'room' | 'house' | 'hotel';
+  type: RentType;
   price: number;
   isPremium: boolean;
   previewImage: string;
 };
+
+type RentType = 'apartment' | 'room' | 'house' | 'hotel';
 
 function FavouritesPage({card}: FavouritesPageProps): JSX.Element {
   const { title, type, price, isPremium, previewImage } = card;
