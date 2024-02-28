@@ -1,6 +1,6 @@
 import MainPage from '../../pages/main-page/main-page';
-import Footer from '../footer/footer';
-import Header from '../header/header';
+import Footer from '../footer/footer.tsx';
+import Header from '../header/header.tsx';
 import { MainPageScreenProps } from '../../shared-types';
 
 function App({ offerCount }: MainPageScreenProps): JSX.Element {

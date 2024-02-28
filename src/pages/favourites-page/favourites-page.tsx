@@ -1,5 +1,5 @@
-import Footer from '../../components/footer/footer';
-import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer.tsx';
+import Header from '../../components/header/header.tsx';
 import FavouriteCard from '../../components/favourite-card/favourite-card';
 import { CardItemProps } from '../../shared-types';
 
