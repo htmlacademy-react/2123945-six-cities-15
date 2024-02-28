@@ -1,22 +1,4 @@
-type CardItem = {
-    id: number | string;
-    title: string;
-    type: RentType;
-    price: number;
-    previewImage: string;
-    city: {
-    name: string;
-    };
-    isFavorite: boolean;
-    isPremium: boolean;
-    rating: number;
-    }
-
-  type RentType = 'apartment' | 'room' | 'house' | 'hotel';
-
-  type FavouriteProps = {
-    card: CardItem;
-  }
+import { CardItemProps } from '../../shared-types';
 
 function PremiumBadge(): JSX.Element {
   return (
@@ -27,7 +9,7 @@ function PremiumBadge(): JSX.Element {
 }
 
 
-function FavouriteCard({card} : FavouriteProps): JSX.Element {
+function FavouriteCard({card} : CardItemProps): JSX.Element {
   const {title, type, price, isPremium, previewImage} = card;
   return (
     <article className="favorites__card place-card">

@@ -1,10 +1,7 @@
 import MainPage from '../../pages/main-page/main-page';
 import Footer from '../footer/footer';
 import Header from '../header/header';
-
-type MainPageScreenProps = {
-  offerCount: number;
-};
+import { MainPageScreenProps } from '../../shared-types';
 
 function App({ offerCount }: MainPageScreenProps): JSX.Element {
   return (

@@ -1,9 +1,5 @@
 import { Options } from '../../const';
-
-type OptionItemProps = {
-  name: typeof Options[number];
-  isActive: boolean;
-}
+import { OptionItemProps } from '../../shared-types';
 
 function OptionItem({name, isActive} : OptionItemProps): JSX.Element {
   return (

@@ -2,18 +2,9 @@ import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import FavouriteCard from '../../components/favourite-card/favourite-card';
 import { cards } from '../../mock-data/mock-data';
+import { CardItem } from '../../shared-types';
 
-type FavouritesPageProps = {
-  title: string;
-  type: RentType;
-  price: number;
-  isPremium: boolean;
-  previewImage: string;
-};
-
-type RentType = 'apartment' | 'room' | 'house' | 'hotel';
-
-function FavouritesPage({card}: FavouritesPageProps): JSX.Element {
+function FavouritesPage({card}: CardItem): JSX.Element {
   const { title, type, price, isPremium, previewImage } = card;
   return (
     <>

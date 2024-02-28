@@ -1,8 +1,4 @@
-import { Cities } from '../../const';
-
-type CityItemProps = {
-  city: typeof Cities[number];
-}
+import { CityItemProps } from '../../shared-types';
 
 function CityItem({city} : CityItemProps): JSX.Element {
   return (

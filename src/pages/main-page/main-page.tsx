@@ -3,12 +3,9 @@ import OptionsList from '../../components/sorting/sorting';
 import Map from '../../components/map/map';
 import CardsList from '../../components/cards-list/cards-list';
 import SortingHeader from '../../components/sorting-header/sorting-header';
+import { MainPageScreenProps } from '../../shared-types';
 
-type MainPageProps = {
-  offerCount: number;
-};
-
-function MainPage({ offerCount }: MainPageProps): JSX.Element {
+function MainPage({ offerCount }: MainPageScreenProps): JSX.Element {
   return (
     <main className="page__main page__main--index">
       <h1 className="visually-hidden">Cities</h1>

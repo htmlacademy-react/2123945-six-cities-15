@@ -1,22 +1,5 @@
-type CardItem = {
-  id: number | string;
-  title: string;
-  type: RentType;
-  price: number;
-  previewImage: string;
-  city: {
-    name: string;
-  };
-  isFavorite: boolean;
-  isPremium: boolean;
-  rating: number;
-};
-
-type RentType = 'apartment' | 'room' | 'house' | 'hotel';
-
-type CardItemProps = {
-  card: CardItem;
-};
+import { CardItem } from '../../shared-types';
+import { CardItemProps } from '../../shared-types';
 
 function PremiumBadge(): JSX.Element {
   return (
