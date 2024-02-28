@@ -8,7 +8,6 @@ function PremiumBadge(): JSX.Element {
   );
 }
 
-
 function FavouriteCard({card} : CardItemProps): JSX.Element {
   const {title, type, price, isPremium, previewImage} = card;
   return (

@@ -1,4 +1,4 @@
-import { Cities, Options } from './const';
+import { CITIES, OPTIONS } from './const';
 
 export type MainPageScreenProps = {
   offerCount: number;
@@ -25,10 +25,10 @@ export type CardItem = {
 export type RentType = 'apartment' | 'room' | 'house' | 'hotel';
 
 export type CityItemProps = {
-  city: typeof Cities[number];
+  city: typeof CITIES[number];
 }
 
 export type OptionItemProps = {
-  name: typeof Options[number];
+  name: typeof OPTIONS[number];
   isActive: boolean;
 }

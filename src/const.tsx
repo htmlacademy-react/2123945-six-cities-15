@@ -2,7 +2,7 @@ export const Setting = {
   OfferCount: 312,
 };
 
-export const Cities = [
+export const CITIES = [
   'Paris',
   'Cologne',
   'Brussels',
@@ -11,7 +11,7 @@ export const Cities = [
   'Dusseldorf',
 ] as const;
 
-export const Options = [
+export const OPTIONS = [
   'Popular',
   'Price: low to high',
   'Price: high to low',

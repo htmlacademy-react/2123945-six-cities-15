@@ -1,4 +1,4 @@
-import { Cities } from '../../const';
+import { CITIES } from '../../const';
 import CityItem from '../city-item/city-item';
 
 function CitiesList(): JSX.Element {
@@ -6,7 +6,7 @@ function CitiesList(): JSX.Element {
     <div className="tabs">
       <section className="locations container">
         <ul className="locations__list tabs__list">
-          {Cities.map((city) => <CityItem city={city} key={city}/>)}
+          {CITIES.map((city) => <CityItem city={city} key={city}/>)}
         </ul>
       </section>
     </div>
