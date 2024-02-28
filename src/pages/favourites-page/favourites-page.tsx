@@ -1,10 +1,9 @@
 import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import FavouriteCard from '../../components/favourite-card/favourite-card';
-import { cards } from '../../mock-data/mock-data';
-import { CardItem } from '../../shared-types';
+import { CardItemProps } from '../../shared-types';
 
-function FavouritesPage({card}: CardItem): JSX.Element {
+function FavouritesPage({card}: CardItemProps): JSX.Element {
   const { title, type, price, isPremium, previewImage } = card;
   return (
     <>
@@ -24,21 +23,22 @@ function FavouritesPage({card}: CardItem): JSX.Element {
                     </a>
                   </div>
                 </div>
+
                 <div className="favorites__places">
                   <FavouriteCard
-                    title={cards.title}
-                    type={cards.type}
-                    price={cards.price}
-                    isPremium={cards.isPremium}
-                    previewImage={cards.previewImage}
+                    title={title}
+                    type={type}
+                    price={price}
+                    isPremium={isPremium}
+                    previewImage={previewImage}
                   />
 
                   <FavouriteCard
-                    title={cards.title}
-                    type={cards.type}
-                    price={cards.price}
-                    isPremium={cards.isPremium}
-                    previewImage={cards.previewImage}
+                    title={title}
+                    type={type}
+                    price={price}
+                    isPremium={isPremium}
+                    previewImage={previewImage}
                   />
                 </div>
               </li>
@@ -53,11 +53,11 @@ function FavouritesPage({card}: CardItem): JSX.Element {
                 </div>
                 <div className="favorites__places">
                   <FavouriteCard
-                    title={cards.title}
-                    type={cards.type}
-                    price={cards.price}
-                    isPremium={cards.isPremium}
-                    previewImage={cards.previewImage}
+                    title={title}
+                    type={type}
+                    price={price}
+                    isPremium={isPremium}
+                    previewImage={previewImage}
                   />
                 </div>
               </li>

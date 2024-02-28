@@ -14,12 +14,12 @@ export type CardItem = {
   type: RentType;
   price: number;
   previewImage: string;
-  city: {
+  city?: {
     name: string;
   };
-  isFavorite: boolean;
-  isPremium: boolean;
-  rating: number;
+  isFavorite?: boolean;
+  isPremium?: boolean;
+  rating?: number;
 };
 
 export type RentType = 'apartment' | 'room' | 'house' | 'hotel';
@@ -32,3 +32,5 @@ export type OptionItemProps = {
   name: typeof OPTIONS[number];
   isActive: boolean;
 }
+
+export type FavouritesPageProps = Pick<CardItem, 'title' | 'type'| 'price'| 'isPremium' | 'previewImage' >;

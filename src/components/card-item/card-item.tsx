@@ -1,4 +1,3 @@
-import { CardItem } from '../../shared-types';
 import { CardItemProps } from '../../shared-types';
 
 function PremiumBadge(): JSX.Element {
