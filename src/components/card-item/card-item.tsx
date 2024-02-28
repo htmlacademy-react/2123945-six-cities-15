@@ -5,16 +5,16 @@ type CardItem = {
   price: number;
   previewImage: string;
   city: {
-  name: string;
+    name: string;
   };
   isFavorite: boolean;
   isPremium: boolean;
   rating: number;
-  }
+};
 
 type CardItemProps = {
   card: CardItem;
-}
+};
 
 function PremiumBadge(): JSX.Element {
   return (
@@ -24,15 +24,21 @@ function PremiumBadge(): JSX.Element {
   );
 }
 
-function CardItem({card}: CardItemProps): JSX.Element {
-  const {title, type, price, isPremium, previewImage} = card;
+function CardItem({ card }: CardItemProps): JSX.Element {
+  const { title, type, price, isPremium, previewImage } = card;
   return (
     <article className="cities__card place-card">
-      {isPremium && <PremiumBadge/>}
+      {isPremium && <PremiumBadge />}
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
           <a href="#">
-            <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place image" />
+            <img
+              className="place-card__image"
+              src={previewImage}
+              width="260"
+              height="200"
+              alt="Place image"
+            />
           </a>
         </a>
       </div>
@@ -55,8 +61,7 @@ function CardItem({card}: CardItemProps): JSX.Element {
               style={{
                 width: '80%',
               }}
-            >
-            </span>
+            />
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
