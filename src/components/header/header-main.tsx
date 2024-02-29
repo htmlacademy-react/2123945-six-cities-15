@@ -1,6 +1,7 @@
+import CitiesList from '../cities-list/cities-list';
 import Logo from '../logo/logo';
 
-function Header(): JSX.Element {
+function HeaderMain(): JSX.Element {
   return (
     <header className="header">
       <div className="container">
@@ -31,8 +32,9 @@ function Header(): JSX.Element {
           </nav>
         </div>
       </div>
+      <CitiesList />
     </header>
   );
 }
 
-export default Header;
+export default HeaderMain;
