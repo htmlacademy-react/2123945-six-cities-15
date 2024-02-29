@@ -8,13 +8,11 @@ export type RentType = 'apartment' | 'room' | 'house' | 'hotel';
 
 export type CardItemType = {
   id: number | string;
-  title: string;
+  title?: string;
   type: RentType;
   price: number;
   previewImage: string;
-  city?: {
-    name: string;
-  };
+  city: string;
   isFavorite?: boolean;
   isPremium?: boolean;
   rating?: number;
@@ -37,6 +35,10 @@ export type FavouritesPageProps = Pick<
   CardItemType,
   'title' | 'type' | 'price' | 'isPremium' | 'previewImage'
 >;
+
+export type FavouritesListProps = {
+  cards: string[];
+};
 
 export type UserType = {
   name: string;

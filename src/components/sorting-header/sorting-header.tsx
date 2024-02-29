@@ -1,8 +1,6 @@
-type MainPageProps = {
-  offerCount: number;
-};
+import { MainPageScreenProps } from '../../shared-types';
 
-function SortingHeader({ offerCount }: MainPageProps): JSX.Element {
+function SortingHeader({ offerCount }: MainPageScreenProps): JSX.Element {
   return (
     <b className="places__found">
       <b className="places__found">{offerCount} places to stay in Amsterdam</b>

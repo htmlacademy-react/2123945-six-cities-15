@@ -56,7 +56,7 @@ export const INSIDE_OFFERS = [
   'Fridge',
 ];
 
-export const GALLERY_IMAGES: string[] = [
+export const GALLERY_IMAGES = [
   'img/room.jpg',
   'img/apartment-01.jpg',
   'img/apartment-02.jpg',
