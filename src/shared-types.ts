@@ -63,3 +63,12 @@ export type GalleryProps = {
 export type OfferInsideListProps = {
   insideOffers: string[];
 };
+
+export type RatingItemProps = {
+  rating: RatingType;
+};
+
+export type RatingType = {
+  value: string;
+  title: string;
+};

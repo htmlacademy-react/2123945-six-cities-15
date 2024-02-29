@@ -1,14 +1,31 @@
+import { RatingType } from './shared-types';
+
 export const Setting = {
   OfferCount: 312,
 };
 
-export const RatingNames: { [index: string]: string } = {
-  '1': 'awful',
-  '2': 'bad',
-  '3': 'acceptable',
-  '4': 'good',
-  '5': 'amazing',
-};
+export const RATINGS: RatingType[] = [
+  {
+    value: '5',
+    title: 'perfect',
+  },
+  {
+    value: '4',
+    title: 'good',
+  },
+  {
+    value: '3',
+    title: 'not bad',
+  },
+  {
+    value: '2',
+    title: 'badly',
+  },
+  {
+    value: '1',
+    title: 'terribly',
+  },
+];
 
 export const CITIES = [
   'Paris',
