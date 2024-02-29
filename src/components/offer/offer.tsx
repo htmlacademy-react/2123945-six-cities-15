@@ -1,53 +1,13 @@
+import { GALLERY_IMAGES, INSIDE_OFFERS } from '../../const';
+import Gallery from '../gallery/gallery';
+import OfferInsideList from '../offer-inside-list/offer-inside-list';
+
 function Offer(): JSX.Element {
   return (
     <main className="page__main page__main--offer">
       <section className="offer">
-        <div className="offer__gallery-container container">
-          <div className="offer__gallery">
-            <div className="offer__image-wrapper">
-              <img
-                className="offer__image"
-                src="img/room.jpg"
-                alt="Photo studio"
-              />
-            </div>
-            <div className="offer__image-wrapper">
-              <img
-                className="offer__image"
-                src="img/apartment-01.jpg"
-                alt="Photo studio"
-              />
-            </div>
-            <div className="offer__image-wrapper">
-              <img
-                className="offer__image"
-                src="img/apartment-02.jpg"
-                alt="Photo studio"
-              />
-            </div>
-            <div className="offer__image-wrapper">
-              <img
-                className="offer__image"
-                src="img/apartment-03.jpg"
-                alt="Photo studio"
-              />
-            </div>
-            <div className="offer__image-wrapper">
-              <img
-                className="offer__image"
-                src="img/studio-01.jpg"
-                alt="Photo studio"
-              />
-            </div>
-            <div className="offer__image-wrapper">
-              <img
-                className="offer__image"
-                src="img/apartment-01.jpg"
-                alt="Photo studio"
-              />
-            </div>
-          </div>
-        </div>
+        <Gallery images={GALLERY_IMAGES} />
+
         <div className="offer__container container">
           <div className="offer__wrapper">
             <div className="offer__mark">
@@ -92,18 +52,8 @@ function Offer(): JSX.Element {
             </div>
             <div className="offer__inside">
               <h2 className="offer__inside-title">What&apos;s inside</h2>
-              <ul className="offer__inside-list">
-                <li className="offer__inside-item">Wi-Fi</li>
-                <li className="offer__inside-item">Washing machine</li>
-                <li className="offer__inside-item">Towels</li>
-                <li className="offer__inside-item">Heating</li>
-                <li className="offer__inside-item">Coffee machine</li>
-                <li className="offer__inside-item">Baby seat</li>
-                <li className="offer__inside-item">Kitchen</li>
-                <li className="offer__inside-item">Dishwasher</li>
-                <li className="offer__inside-item">Cabel TV</li>
-                <li className="offer__inside-item">Fridge</li>
-              </ul>
+
+              <OfferInsideList insideOffers={INSIDE_OFFERS} />
             </div>
             <div className="offer__host">
               <h2 className="offer__host-title">Meet the host</h2>
@@ -268,8 +218,7 @@ function Offer(): JSX.Element {
                   id="review"
                   name="review"
                   placeholder="Tell how was your stay, what you like and what can be improved"
-                >
-                </textarea>
+                ></textarea>
                 <div className="reviews__button-wrapper">
                   <p className="reviews__help">
                     To submit review please make sure to set{' '}

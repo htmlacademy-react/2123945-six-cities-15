@@ -55,3 +55,11 @@ export type ReviewItemType = {
 export type ReviewsItemProps = {
   review: ReviewItemType;
 };
+
+export type GalleryProps = {
+  images: string[];
+};
+
+export type OfferInsideListProps = {
+  insideOffers: string[];
+};

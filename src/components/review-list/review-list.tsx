@@ -1,4 +1,4 @@
-import { ReviewsItemProps } from '../../shared-types';
+import { ReviewItemType, ReviewsItemProps } from '../../shared-types';
 
 function ReviewItem({ review }: ReviewsItemProps): JSX.Element {
   const { user, comment, date, rating } = review;
@@ -36,4 +36,14 @@ function ReviewItem({ review }: ReviewsItemProps): JSX.Element {
   );
 }
 
-export default ReviewItem;
+function ReviewsList({ reviews }: { reviews: ReviewItemType[] }): JSX.Element {
+  return (
+    <ul className="reviews__list">
+      {reviews.map((review) => (
+        <ReviewItem review={review} key={review.id} />
+      ))}
+    </ul>
+  );
+}
+
+export default ReviewsList;

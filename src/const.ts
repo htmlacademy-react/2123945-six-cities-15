@@ -25,3 +25,40 @@ export const OPTIONS = [
   'Price: high to low',
   'Top rated first',
 ] as const;
+
+export const INSIDE_OFFERS = [
+  'Wi-Fi',
+  'Washing machine',
+  'Towels',
+  'Heating',
+  'Coffee machine',
+  'Baby seat',
+  'Kitchen',
+  'Dishwasher',
+  'Cabel TV',
+  'Fridge',
+];
+
+export const GALLERY_IMAGES: string[] = [
+  'img/room.jpg',
+  'img/apartment-01.jpg',
+  'img/apartment-02.jpg',
+  'img/apartment-03.jpg',
+  'img/studio-01.jpg',
+  'img/apartment-01.jpg',
+];
+
+export const REVIEWS = [
+  {
+    id: 1,
+    date: 'April 2019',
+    user: {
+      name: 'Max',
+      avatarUrl: 'img/avatar-max.jpg',
+      isPro: false,
+    },
+    comment:
+      'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.',
+    rating: 4,
+  },
+];

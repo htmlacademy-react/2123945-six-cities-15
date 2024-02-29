@@ -5,7 +5,7 @@ function CardsList(): JSX.Element {
   return (
     <div className="cities__places-list places__list tabs__content">
       {cards.map((card) => (
-        <CardItem card={card.city.name} key={card.id} />
+        <CardItem card={card} key={card.id} />
       ))}
     </div>
   );
