@@ -1,4 +1,4 @@
-import { CardItemProps } from '../../shared-types';
+import { CardsItemProps } from '../../shared-types';
 
 function PremiumBadge(): JSX.Element {
   return (
@@ -8,14 +8,20 @@ function PremiumBadge(): JSX.Element {
   );
 }
 
-function FavouriteCard({card} : CardItemProps): JSX.Element {
-  const {title, type, price, isPremium, previewImage} = card;
+function FavouriteCard({ card }: CardsItemProps): JSX.Element {
+  const { title, type, price, isPremium, previewImage } = card;
   return (
     <article className="favorites__card place-card">
-      {isPremium && <PremiumBadge/>}
+      {isPremium && <PremiumBadge />}
       <div className="favorites__image-wrapper place-card__image-wrapper">
         <a href="#">
-          <img className="place-card__image" src={previewImage} width="150" height="110" alt="Place image"/>
+          <img
+            className="place-card__image"
+            src={previewImage}
+            width="150"
+            height="110"
+            alt="Place image"
+          />
         </a>
       </div>
       <div className="favorites__card-info place-card__info">
@@ -24,7 +30,10 @@ function FavouriteCard({card} : CardItemProps): JSX.Element {
             <b className="place-card__price-value">&euro;{price}</b>
             <span className="place-card__price-text">&#47;&nbsp;night</span>
           </div>
-          <button className="place-card__bookmark-button place-card__bookmark-button--active button" type="button">
+          <button
+            className="place-card__bookmark-button place-card__bookmark-button--active button"
+            type="button"
+          >
             <svg className="place-card__bookmark-icon" width="18" height="19">
               <use xlinkHref="#icon-bookmark"></use>
             </svg>

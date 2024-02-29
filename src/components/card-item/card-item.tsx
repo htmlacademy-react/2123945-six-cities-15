@@ -1,4 +1,4 @@
-import { CardItemProps } from '../../shared-types';
+import { CardsItemProps } from '../../shared-types';
 
 function PremiumBadge(): JSX.Element {
   return (
@@ -8,7 +8,7 @@ function PremiumBadge(): JSX.Element {
   );
 }
 
-function CardItem({ card }: CardItemProps): JSX.Element {
+function CardItem({ card }: CardsItemProps): JSX.Element {
   const { title, type, price, isPremium, previewImage } = card;
   return (
     <article className="cities__card place-card">

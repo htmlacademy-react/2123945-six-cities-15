@@ -1,9 +1,9 @@
 import Footer from '../../components/footer/footer.tsx';
 import Header from '../../components/header/header.tsx';
 import FavouriteCard from '../../components/favourite-card/favourite-card';
-import { CardItemProps } from '../../shared-types';
+import { CardsItemProps } from '../../shared-types';
 
-function FavouritesPage({card}: CardItemProps): JSX.Element {
+function FavouritesPage({ card }: CardsItemProps): JSX.Element {
   const { title, type, price, isPremium, previewImage } = card;
   return (
     <>
@@ -12,7 +12,6 @@ function FavouritesPage({card}: CardItemProps): JSX.Element {
         <div className="page__favorites-container container">
           <section className="favorites">
             <h1 className="favorites__title">Saved listing</h1>
-
 
             <ul className="favorites__list">
               <li className="favorites__locations-items">
@@ -65,7 +64,7 @@ function FavouritesPage({card}: CardItemProps): JSX.Element {
           </section>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }
