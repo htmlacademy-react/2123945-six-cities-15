@@ -6,7 +6,7 @@ import CardsList from '../../components/cards-list/cards-list';
 import ReviewsList from '../../components/review-list/review-list';
 import RatingInput from '../../components/rating-input/rating-input';
 
-function Offer(): JSX.Element {
+function OfferPage(): JSX.Element {
   return (
     <main className="page__main page__main--offer">
       <section className="offer">
@@ -106,8 +106,7 @@ function Offer(): JSX.Element {
                   id="review"
                   name="review"
                   placeholder="Tell how was your stay, what you like and what can be improved"
-                >
-                </textarea>
+                ></textarea>
                 <div className="reviews__button-wrapper">
                   <p className="reviews__help">
                     To submit review please make sure to set{' '}
@@ -298,4 +297,4 @@ function Offer(): JSX.Element {
   );
 }
 
-export default Offer;
+export default OfferPage;
