@@ -4,11 +4,13 @@ import Footer from '../footer/footer';
 
 function Layout(): JSX.Element {
   return (
-    <Header/>
+    <>
+      <Header />
       <main>
         <Outlet />
       </main>
-    <Footer/>
+      <Footer />
+    </>
   );
 }
 
