@@ -19,7 +19,7 @@ export type CardItemType = {
 };
 
 export type CardsItemProps = {
-  card: CardItemType;
+  card?: CardItemType;
 };
 
 export type CityItemProps = {
