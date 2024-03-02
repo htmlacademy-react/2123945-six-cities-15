@@ -1,4 +1,4 @@
-import Footer from '../../components/footer/Footer';
+import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import FavouriteCard from '../../components/favourite-card/favourite-card';
 import { CardsItemProps } from '../../shared-types';

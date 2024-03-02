@@ -15,7 +15,6 @@ function App({ offerCount }: MainPageScreenProps): JSX.Element {
           <Route path="offer" element={<OfferPage />} />
           <Route path="favourites" element={<FavouritesPage />} />
           <Route path="login" element={<LoginPage />} />
-          <Route path="404" element={} />
 
           <div className="page page--gray page--main">
             <MainPage offerCount={offerCount} />
