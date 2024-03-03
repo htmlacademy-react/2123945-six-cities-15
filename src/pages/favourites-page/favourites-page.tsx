@@ -3,9 +3,10 @@ import FavouriteCard from '../../components/favourite-card/favourite-card';
 import { CardsItemProps } from '../../shared-types';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { cards } from '../../mock-data/mock-data';
 
 function FavouritesPage({ card }: CardsItemProps): JSX.Element {
-  const { title, type, price, isPremium, previewImage } = card;
+  const { id, title, type, price, isPremium, previewImage } = card;
   return (
     <>
       <Helmet>
@@ -27,21 +28,15 @@ function FavouritesPage({ card }: CardsItemProps): JSX.Element {
                 </div>
 
                 <div className="favorites__places">
-                  <FavouriteCard
-                    title={title}
-                    type={type}
-                    price={price}
-                    isPremium={isPremium}
-                    previewImage={previewImage}
-                  />
-
-                  <FavouriteCard
-                    title={title}
-                    type={type}
-                    price={price}
-                    isPremium={isPremium}
-                    previewImage={previewImage}
-                  />
+                  {cards.map((card) => (
+                    <FavouriteCard
+                      key={id}
+                      title={title}
+                      type={type}
+                      price={price}
+                      isPremium={isPremium}
+                      previewImage={previewImage}
+                    />))}
                 </div>
               </li>
 
@@ -54,13 +49,15 @@ function FavouritesPage({ card }: CardsItemProps): JSX.Element {
                   </div>
                 </div>
                 <div className="favorites__places">
-                  <FavouriteCard
-                    title={title}
-                    type={type}
-                    price={price}
-                    isPremium={isPremium}
-                    previewImage={previewImage}
-                  />
+                  {cards.map((card) => (
+                    <FavouriteCard
+                      key={id}
+                      title={title}
+                      type={type}
+                      price={price}
+                      isPremium={isPremium}
+                      previewImage={previewImage}
+                    />))}
                 </div>
               </li>
             </ul>
