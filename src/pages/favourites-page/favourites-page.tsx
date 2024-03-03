@@ -1,13 +1,16 @@
 import Footer from '../../components/footer/footer';
-import Header from '../../components/header/header';
 import FavouriteCard from '../../components/favourite-card/favourite-card';
 import { CardsItemProps } from '../../shared-types';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 function FavouritesPage({ card }: CardsItemProps): JSX.Element {
   const { title, type, price, isPremium, previewImage } = card;
   return (
     <>
-      <Header />
+      <Helmet>
+        <title>6 cities: favorites</title>
+      </Helmet>
       <main className="page__main page__main--favorites">
         <div className="page__favorites-container container">
           <section className="favorites">
@@ -17,9 +20,9 @@ function FavouritesPage({ card }: CardsItemProps): JSX.Element {
               <li className="favorites__locations-items">
                 <div className="favorites__locations locations locations--current">
                   <div className="locations__item">
-                    <a className="locations__item-link" href="#">
+                    <Link className="locations__item-link" to="#">
                       <span>Amsterdam</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -45,9 +48,9 @@ function FavouritesPage({ card }: CardsItemProps): JSX.Element {
               <li className="favorites__locations-items">
                 <div className="favorites__locations locations locations--current">
                   <div className="locations__item">
-                    <a className="locations__item-link" href="#">
+                    <Link className="locations__item-link" to="#">
                       <span>Cologne</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="favorites__places">

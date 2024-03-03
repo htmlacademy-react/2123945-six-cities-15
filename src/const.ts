@@ -79,3 +79,16 @@ export const REVIEWS = [
     rating: 4,
   },
 ];
+
+export enum AppRoute {
+  Root = '/',
+  OfferPage = '/offer/:id',
+  FavouritesPage = '/favourites',
+  LoginPage = '/login',
+}
+
+export enum AuthorisationStatus {
+  Auth = 'AUTH',
+  NoAuth = 'NO_AUTH',
+  Unknown = 'UNKNOWN',
+}
