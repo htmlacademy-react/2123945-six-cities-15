@@ -35,10 +35,15 @@ function App({ offerCount }: MainPageScreenProps): JSX.Element {
                 </PrivateRoute>
               }
             />
-            <Route
-              path={AppRoute.LoginPage}
-              element={<LoginPage />}
+
+            <Route path={AppRoute.LoginPage} element={
+              <PrivateRoute authorisationStatus={AuthorisationStatus.NoAuth} isReverse>
+                <LoginPage/>
+              </PrivateRoute>
+            }
             />
+
+
             <Route
               path='*'
               element={<Page404 />}
