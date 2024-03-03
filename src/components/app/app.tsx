@@ -60,16 +60,3 @@ function App({ offerCount }: MainPageScreenProps): JSX.Element {
 }
 
 export default App;
-
-MainPage
-<div class="page page--gray page--main"></div>
-header__logo-link header__logo-link--active
-FavouritesPage
-<div class="page">
-header__logo-link
-  OfferPage
-  <div class="page">
-  header__logo-link
-    LoginPage
-    <div class="page page--gray page--login">
-    header__logo-link

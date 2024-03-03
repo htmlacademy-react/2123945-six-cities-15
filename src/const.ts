@@ -80,15 +80,15 @@ export const REVIEWS = [
   },
 ];
 
-export enum AppRoute {
-  Root = '/',
-  OfferPage = '/offer/:id',
-  FavouritesPage = '/favourites',
-  LoginPage = '/login',
-}
+export const AppRoute = {
+  Root: '/',
+  OfferPage: '/offer/:id',
+  FavouritesPage: '/favourites',
+  LoginPage: '/login',
+} as const;
 
-export enum AuthorisationStatus {
-  Auth = 'AUTH',
-  NoAuth = 'NO_AUTH',
-  Unknown = 'UNKNOWN',
-}
+export const AuthorisationStatus = {
+  Auth: 'AUTH',
+  NoAuth: 'NO_AUTH',
+  Unknown: 'UNKNOWN',
+} as const;
