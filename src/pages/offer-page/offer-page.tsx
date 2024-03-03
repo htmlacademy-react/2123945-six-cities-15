@@ -1,11 +1,11 @@
-import { GALLERY_IMAGES, INSIDE_OFFERS, RATINGS, REVIEWS } from '../../const';
+import { GALLERY_IMAGES, INSIDE_OFFERS, REVIEWS } from '../../const';
 import Gallery from '../../components/gallery/gallery';
 import OfferInsideList from '../../components/offer-inside-list/offer-inside-list';
 import Map from '../../components/map/map';
 import CardsList from '../../components/cards-list/cards-list';
 import ReviewsList from '../../components/review-list/review-list';
-import RatingInput from '../../components/rating-input/rating-input';
 import { Helmet } from 'react-helmet-async';
+import ReviewsForm from '../../components/review-form/review-form';
 
 function OfferPage(): JSX.Element {
   return (
@@ -96,39 +96,7 @@ function OfferPage(): JSX.Element {
                 Reviews &middot; <span className="reviews__amount">1</span>
                 </h2>
                 <ReviewsList reviews={REVIEWS} />
-
-                <form className="reviews__form form" action="#" method="post">
-                  <label className="reviews__label form__label" htmlFor="review">
-                  Your review
-                  </label>
-                  <div className="reviews__rating-form form__rating">
-                    {RATINGS.map((rating) => (
-                      <RatingInput key={rating.value} rating={rating} />
-                    ))}
-                  </div>
-                  <textarea
-                    className="reviews__textarea form__textarea"
-                    id="review"
-                    name="review"
-                    placeholder="Tell how was your stay, what you like and what can be improved"
-                  >
-                  </textarea>
-                  <div className="reviews__button-wrapper">
-                    <p className="reviews__help">
-                    To submit review please make sure to set{' '}
-                      <span className="reviews__star">rating</span> and describe
-                    your stay with at least{' '}
-                      <b className="reviews__text-amount">50 characters</b>.
-                    </p>
-                    <button
-                      className="reviews__submit form__submit button"
-                      type="submit"
-                      disabled
-                    >
-                    Submit
-                    </button>
-                  </div>
-                </form>
+                <ReviewsForm />
               </section>
             </div>
           </div>
