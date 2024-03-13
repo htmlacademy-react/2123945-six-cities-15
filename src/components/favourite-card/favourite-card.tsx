@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CardsItemProps } from '../../shared-types';
+import { FavoriteCardProps } from '../../shared-types';
 
 function PremiumBadge(): JSX.Element {
   return (
@@ -9,7 +9,7 @@ function PremiumBadge(): JSX.Element {
   );
 }
 
-function FavouriteCard({ card }: CardsItemProps): JSX.Element {
+function FavouriteCard({ card }: FavoriteCardProps): JSX.Element {
   const { id, title, type, price, isPremium, previewImage } = card;
   return (
     <article className="favorites__card place-card">

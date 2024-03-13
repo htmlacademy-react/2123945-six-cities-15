@@ -40,6 +40,10 @@ export type FavouritesListProps = {
   cards: string[];
 };
 
+export type FavoriteCardProps = {
+  card: CardItemType;
+};
+
 export type UserType = {
   name: string;
   avatarUrl: string;

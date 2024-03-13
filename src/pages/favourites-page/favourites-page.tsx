@@ -1,12 +1,9 @@
 import Footer from '../../components/footer/footer';
 import FavouriteCard from '../../components/favourite-card/favourite-card';
-import { CardsItemProps } from '../../shared-types';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { cards } from '../../mock-data/mock-data';
 
-function FavouritesPage({ card }: CardsItemProps): JSX.Element {
-  const { id, title, type, price, isPremium, previewImage } = card;
+function FavouritesPage(): JSX.Element {
   return (
     <>
       <Helmet>
@@ -28,15 +25,19 @@ function FavouritesPage({ card }: CardsItemProps): JSX.Element {
                 </div>
 
                 <div className="favorites__places">
-                  {cards.map((card) => (
-                    <FavouriteCard
-                      key={id}
-                      title={title}
-                      type={type}
-                      price={price}
-                      isPremium={isPremium}
-                      previewImage={previewImage}
-                    />))}
+                  <FavouriteCard
+                    card={{
+                      id: '',
+                      title: undefined,
+                      type: 'apartment',
+                      price: 0,
+                      previewImage: '',
+                      city: '',
+                      isFavorite: undefined,
+                      isPremium: undefined,
+                      rating: undefined,
+                    }}
+                  />
                 </div>
               </li>
 
@@ -49,15 +50,19 @@ function FavouritesPage({ card }: CardsItemProps): JSX.Element {
                   </div>
                 </div>
                 <div className="favorites__places">
-                  {cards.map((card) => (
-                    <FavouriteCard
-                      key={id}
-                      title={title}
-                      type={type}
-                      price={price}
-                      isPremium={isPremium}
-                      previewImage={previewImage}
-                    />))}
+                  <FavouriteCard
+                    card={{
+                      id: '',
+                      title: undefined,
+                      type: 'apartment',
+                      price: 0,
+                      previewImage: '',
+                      city: '',
+                      isFavorite: undefined,
+                      isPremium: undefined,
+                      rating: undefined,
+                    }}
+                  />
                 </div>
               </li>
             </ul>

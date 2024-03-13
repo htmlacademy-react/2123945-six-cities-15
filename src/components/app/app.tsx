@@ -17,41 +17,45 @@ function App({ offerCount }: MainPageScreenProps): JSX.Element {
   return (
     <HelmetProvider>
       <BrowserRouter>
-      <ScrollToTop />
+        <ScrollToTop />
         <Routes>
           <Route path={AppRoute.Root} element={<Layout />}>
-
-            <Route
-              index
-              element={<MainPage offerCount={offerCount} />}
-            />
-            <Route
-              path={AppRoute.OfferPage}
-              element={<OfferPage />}
-            />
+            <Route index element={<MainPage offerCount={offerCount} />} />
+            <Route path={AppRoute.OfferPage} element={<OfferPage />} />
             <Route
               path={AppRoute.FavouritesPage}
               element={
+                <PrivateRoute authorisationStatus={authorisationStatus}>
+                  <FavouritesPage />
+                </PrivateRoute>
+              }
+            />
+
+            <Route
+              path={AppRoute.LoginPage}
+              element={
                 <PrivateRoute
                   authorisationStatus={authorisationStatus}
+                  isReverse
                 >
                   <FavouritesPage />
                 </PrivateRoute>
               }
             />
 
-            <Route path={AppRoute.LoginPage} element={
-              <PrivateRoute authorisationStatus={authorisationStatus} isReverse>
-                <LoginPage/>
-              </PrivateRoute>
-            }
-            />
-
-
             <Route
-              path='*'
-              element={<Page404 />}
+              path={AppRoute.LoginPage}
+              element={
+                <PrivateRoute
+                  authorisationStatus={authorisationStatus}
+                  isReverse
+                >
+                  <LoginPage />
+                </PrivateRoute>
+              }
             />
+
+            <Route path="*" element={<Page404 />} />
           </Route>
         </Routes>
       </BrowserRouter>
