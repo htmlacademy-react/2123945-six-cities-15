@@ -1,6 +1,6 @@
-import { RentType } from '../shared-types';
+import { CardItemType, RentType } from '../shared-types';
 
-export const cards = [
+export const cards: CardItemType[] = [
   {
     id: '1',
     title: 'The Joshua Tree House',
