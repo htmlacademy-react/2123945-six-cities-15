@@ -79,3 +79,16 @@ export const REVIEWS = [
     rating: 4,
   },
 ];
+
+export const AppRoute = {
+  Root: '/',
+  OfferPage: '/offer/:id',
+  FavouritesPage: '/favourites',
+  LoginPage: '/login',
+} as const;
+
+export const AuthorisationStatus = {
+  Auth: 'AUTH',
+  NoAuth: 'NO_AUTH',
+  Unknown: 'UNKNOWN',
+} as const;

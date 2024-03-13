@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom';
 import { CITIES } from '../../const';
 import { CityItemProps } from '../../shared-types';
 
 function CityItem({ city }: CityItemProps): JSX.Element {
   return (
     <li className="locations__item">
-      <a className="locations__item-link tabs__item" href="#">
+      <Link className="locations__item-link tabs__item" to="#">
         <span>{city}</span>
-      </a>
+      </Link>
     </li>
   );
 }
