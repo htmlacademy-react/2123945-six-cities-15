@@ -2,6 +2,7 @@ import { CITIES, OPTIONS } from './const';
 
 export type MainPageScreenProps = {
   offerCount: number;
+  cards: CardsItemProps;
 };
 
 export type RentType = 'apartment' | 'room' | 'house' | 'hotel';

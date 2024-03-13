@@ -6,14 +6,13 @@ import SortingHeader from '../../components/sorting-header/sorting-header';
 import { MainPageScreenProps } from '../../shared-types';
 import { Helmet } from 'react-helmet-async';
 
-function MainPage({ offerCount }: MainPageScreenProps): JSX.Element {
+function MainPage({ offerCount, cards }: MainPageScreenProps): JSX.Element {
   return (
     <>
       <Helmet>
         <title>6 cities</title>
       </Helmet>
       <div className="page page--gray page--main">
-
         <main className="page__main page__main--index">
           <h1 className="visually-hidden">Cities</h1>
           <div className="tabs">
@@ -25,11 +24,11 @@ function MainPage({ offerCount }: MainPageScreenProps): JSX.Element {
             <div className="cities__places-container container">
               <section className="cities__places places">
                 <h2 className="visually-hidden">Places</h2>
-                <SortingHeader offerCount={offerCount} />
+                <SortingHeader offerCount={offerCount} cards={cards} />
                 <form className="places__sorting" action="#" method="get">
                   <span className="places__sorting-caption">Sort by</span>
                   <span className="places__sorting-type" tabIndex={0}>
-                  Popular
+                    Popular
                     <svg className="places__sorting-arrow" width="7" height="4">
                       <use xlinkHref="#icon-arrow-select"></use>
                     </svg>
