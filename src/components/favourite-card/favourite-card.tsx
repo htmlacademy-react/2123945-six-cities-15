@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom';
-import { FavoriteCardProps } from '../../shared-types';
+import { OfferPreview } from '../../shared-types';
+
+export type FavoriteCardProps = {
+  offer: OfferPreview;
+  className?: string;
+  onMouseHover?: (arg?: OfferPreview) => void;
+};
 
 function PremiumBadge(): JSX.Element {
   return (
@@ -9,10 +15,28 @@ function PremiumBadge(): JSX.Element {
   );
 }
 
-function FavouriteCard({ card }: FavoriteCardProps): JSX.Element {
-  const { id, title, type, price, isPremium, previewImage } = card;
+function FavouriteCard({
+  offer,
+  className,
+  onMouseHover,
+}: FavoriteCardProps): JSX.Element {
+  const handleMouseEnter = () => {
+    if (onMouseHover) {
+      onMouseHover(offer);
+    }
+  };
+  const handleMouseLeave = () => {
+    if (onMouseHover) {
+      onMouseHover();
+    }
+  };
+  const { id, title, type, price, isPremium, previewImage } = offer;
   return (
-    <article className="favorites__card place-card">
+    <article
+      className={`${className} place-card`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       {isPremium && <PremiumBadge />}
       <div className="favorites__image-wrapper place-card__image-wrapper">
         <Link to={`offer/${id}`}>

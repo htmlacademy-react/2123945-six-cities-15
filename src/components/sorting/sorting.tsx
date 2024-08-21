@@ -1,12 +1,13 @@
-import { OPTIONS } from '../../const';
+import { SORTING_OPTIONS } from '../../const';
 import { OptionItemProps } from '../../shared-types';
 
-function OptionItem({name, isActive} : OptionItemProps): JSX.Element {
+function OptionItem({ optionName, isActive }: OptionItemProps): JSX.Element {
   return (
-    <li className={`places__option ${isActive && 'places__option--active'}`}
+    <li
+      className={`places__option ${isActive && 'places__option--active'}`}
       tabIndex={0}
     >
-      {name}
+      {optionName.name}
     </li>
   );
 }
@@ -14,7 +15,13 @@ function OptionItem({name, isActive} : OptionItemProps): JSX.Element {
 function OptionsList(): JSX.Element {
   return (
     <ul className="places__options places__options--custom places__options--opened">
-      {OPTIONS.map((name, index) => <OptionItem name={name} isActive={index === 0} key={name}/>)}
+      {SORTING_OPTIONS.map((optionName, index) => (
+        <OptionItem
+          optionName={optionName}
+          isActive={index === 0}
+          key={optionName.name}
+        />
+      ))}
     </ul>
   );
 }

@@ -1,24 +1,34 @@
-import CitiesList from '../../components/cities-list/cities-list';
 import OptionsList from '../../components/sorting/sorting';
 import Map from '../../components/map/map';
 import CardsList from '../../components/cards-list/cards-list';
 import SortingHeader from '../../components/sorting-header/sorting-header';
-import { MainPageScreenProps } from '../../shared-types';
 import { Helmet } from 'react-helmet-async';
+import LocationsList from '../../components/cities-list/cities-list';
+import { OfferPreview } from '../../shared-types';
+import { useState } from 'react';
 
-function MainPage({ offerCount }: MainPageScreenProps): JSX.Element {
+export type MainPageScreenProps = {
+  offerCount: number;
+  cards: OfferPreview[];
+};
+
+function MainPage({ offerCount, cards }: MainPageScreenProps): JSX.Element {
+  const [activeCard, setActiveCard] = useState<OfferPreview | null>();
+  const handleSelectActiveCard = (card?: OfferPreview) => {
+    setActiveCard(card);
+  };
+
   return (
     <>
       <Helmet>
         <title>6 cities</title>
       </Helmet>
       <div className="page page--gray page--main">
-
         <main className="page__main page__main--index">
           <h1 className="visually-hidden">Cities</h1>
           <div className="tabs">
             <section className="locations container">
-              <CitiesList />
+              <LocationsList />
             </section>
           </div>
           <div className="cities">
@@ -29,7 +39,7 @@ function MainPage({ offerCount }: MainPageScreenProps): JSX.Element {
                 <form className="places__sorting" action="#" method="get">
                   <span className="places__sorting-caption">Sort by</span>
                   <span className="places__sorting-type" tabIndex={0}>
-                  Popular
+                    Popular
                     <svg className="places__sorting-arrow" width="7" height="4">
                       <use xlinkHref="#icon-arrow-select"></use>
                     </svg>
@@ -37,10 +47,15 @@ function MainPage({ offerCount }: MainPageScreenProps): JSX.Element {
                   <OptionsList />
                 </form>
                 <div className="cities__places-list places__list tabs__content">
-                  <CardsList />
+                  <CardsList
+                    cards={cards}
+                    onMouseHover={handleSelectActiveCard}
+                  />
                 </div>
               </section>
-              <Map />
+              <div className="cities__right-section">
+                <Map cards={cards} activeCard={activeCard} />
+              </div>
             </div>
           </div>
         </main>

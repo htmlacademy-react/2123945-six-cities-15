@@ -1,11 +1,19 @@
-import { cards } from '../../mock-data/mock-data';
+import { OfferPreview } from '../../shared-types';
 import CardItem from '../card-item/card-item';
 
-function CardsList(): JSX.Element {
+type FavouriteCardsListProps = {
+  cards: OfferPreview[];
+  onMouseHover?: (arg?: OfferPreview) => void;
+};
+
+function CardsList({
+  cards,
+  onMouseHover,
+}: FavouriteCardsListProps): JSX.Element {
   return (
     <div className="cities__places-list places__list tabs__content">
       {cards.map((card) => (
-        <CardItem card={card} key={card.id} />
+        <CardItem card={card} key={card.id} onMouseHover={onMouseHover} />
       ))}
     </div>
   );

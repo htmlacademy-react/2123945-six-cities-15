@@ -1,29 +1,36 @@
 import { Link } from 'react-router-dom';
-import { CITIES } from '../../const';
-import { CityItemProps } from '../../shared-types';
+import { CITIES, CitiesType } from '../../const';
 
-function CityItem({ city }: CityItemProps): JSX.Element {
+type LocationListItemProps = {
+  city: CitiesType;
+  activeItemClass?: string;
+};
+
+export function LocationListItem({
+  city,
+  activeItemClass = 'tabs__item--active',
+}: LocationListItemProps): JSX.Element {
+  const { isActive, name } = city;
   return (
     <li className="locations__item">
-      <Link className="locations__item-link tabs__item" to="#">
-        <span>{city}</span>
+      <Link
+        className={`locations__item-link tabs__item ${
+          isActive ? activeItemClass : ''
+        }`}
+        to="#"
+      >
+        <span>{name}</span>
       </Link>
     </li>
   );
 }
 
-function CitiesList(): JSX.Element {
-  return (
-    <div className="tabs">
-      <section className="locations container">
-        <ul className="locations__list tabs__list">
-          {CITIES.map((city) => (
-            <CityItem city={city} key={city} />
-          ))}
-        </ul>
-      </section>
-    </div>
-  );
+function LocationsList(): JSX.Element {
+  const locationsListItems = CITIES.map((city) => (
+    <LocationListItem key={city.name} city={city} />
+  ));
+
+  return <ul className="locations__list tabs__list">{locationsListItems}</ul>;
 }
 
-export default CitiesList;
+export default LocationsList;

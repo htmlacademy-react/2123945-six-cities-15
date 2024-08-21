@@ -1,16 +1,19 @@
-import { GalleryProps } from '../../shared-types';
+type Image = {
+  id: number;
+  src: string;
+};
 
-function GalleryImage({ image }: { image: string }): JSX.Element {
+function GalleryImage({ image }: { image: Image }): JSX.Element {
   return (
     <div className="offer__image-wrapper">
-      <img className="offer__image" src={image} alt="Photo studio" />
+      <img className="offer__image" src={image.src} alt="Photo studio" />
     </div>
   );
 }
 
-function Gallery({ images }: GalleryProps): JSX.Element {
+function Gallery({ images }: { images: Image[] }): JSX.Element {
   const galleryImages = images.map((image) => (
-    <GalleryImage key={image} image={image} />
+    <GalleryImage key={image.id} image={image} />
   ));
 
   return (

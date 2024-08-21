@@ -3,7 +3,10 @@ import { AppRoute } from '../../const';
 
 function Logo(): JSX.Element {
   return (
-    <Link className="header__logo-link header__logo-link--active" to={AppRoute.Root}>
+    <Link
+      className="header__logo-link header__logo-link--active"
+      to={AppRoute.Root}
+    >
       <img
         className="header__logo"
         src="img/logo.svg"

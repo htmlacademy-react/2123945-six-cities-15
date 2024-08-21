@@ -1,38 +1,74 @@
-import { CITIES, OPTIONS } from './const';
-
-export type MainPageScreenProps = {
-  offerCount: number;
-};
+import { ChangeEvent } from 'react';
+import { CITIES, SORTING_OPTIONS } from './const';
 
 export type RentType = 'apartment' | 'room' | 'house' | 'hotel';
 
-export type CardItemType = {
-  id: number | string;
-  title?: string;
-  type: RentType;
-  price: number;
-  previewImage: string;
-  city: string;
-  isFavorite?: boolean;
-  isPremium?: boolean;
-  rating?: number;
+export type CardCitiesType = {
+  name: string;
+  location: LocationType;
+};
+
+export type CitiesType = {
+  name: string;
+  isActive: boolean;
+};
+
+export type LocationType = {
+  latitude: number;
+  longitude: number;
+  zoom: number;
 };
 
 export type CardsItemProps = {
-  card: CardItemType;
+  card: OfferPreview;
+  className?: string;
+  onMouseHover?: (arg?: OfferPreview | undefined) => void;
 };
 
-export type CityItemProps = {
-  city: (typeof CITIES)[number];
+export type OfferPreview = Pick<
+  OfferFull,
+  | 'id'
+  | 'title'
+  | 'type'
+  | 'price'
+  | 'previewImage'
+  | 'city'
+  | 'location'
+  | 'isFavorite'
+  | 'isPremium'
+  | 'rating'
+>;
+
+export type OfferFull = {
+  id: string | number;
+  title: string;
+  type: string;
+  price: number;
+  city: CardCitiesType;
+  location: LocationType;
+  isFavorite?: boolean;
+  isPremium?: boolean;
+  rating?: number;
+  previewImage: string;
+  description: string;
+  bedrooms: number;
+  goods: [string];
+  host: {
+    name: string;
+    avatarUrl: string;
+    isPro: boolean;
+  };
+  images: [string];
+  maxAdults: number;
 };
 
 export type OptionItemProps = {
-  name: (typeof OPTIONS)[number];
+  optionName: (typeof SORTING_OPTIONS)[number];
   isActive: boolean;
 };
 
 export type FavouritesPageProps = Pick<
-  CardItemType,
+  OfferPreview,
   'title' | 'type' | 'price' | 'isPremium' | 'previewImage'
 >;
 
@@ -40,9 +76,9 @@ export type FavouritesListProps = {
   cards: string[];
 };
 
-export type FavoriteCardProps = {
-  card: CardItemType;
-};
+// export type FavoriteCardProps = {
+//   card: OfferPreview;
+// };
 
 export type UserType = {
   name: string;
@@ -72,9 +108,28 @@ export type OfferInsideListProps = {
 
 export type RatingItemProps = {
   rating: RatingType;
+  onChange: (evt: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export type RatingType = {
   value: string;
   title: string;
+};
+
+// ПРОПСЫ В ПЕЙДЖАХ
+
+// FavouritesPage
+export type FavoritesScreenProps = {
+  offers: OfferFull[];
+};
+
+// MainPage
+export type MainPageScreenProps = {
+  offerCount: number;
+  offers?: OfferPreview[];
+};
+
+// MainEmpty
+export type CityItemProps = {
+  city: (typeof CITIES)[number];
 };
